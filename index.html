@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FB Reaction</title>
+</head>
+<body>
+	<section class="container">
+		<div class="reaction">
+			<span class="action-button"></span>
+			<span class="action angry"></span>
+			<span class="action angry"></span>
+			<span class="action angry"></span>
+			<span class="action angry"></span>
+			<span class="action angry"></span>
+		</div>
+	</section>
+</body>
+</html>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	*{
+		box-sizing: border-box;
+	}
+	.reaction{
+		height: 50px;
+		overflow: hidden;
+		background-color: green;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+	.container{
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.action{
+		display: flex;
+		width: 50px;
+		height: 50px;
+		background-color: orange;
+		border: 1px solid black;
+		display: none;
+	}
+	.action-button{
+		width: 50px;
+		height: 50px;
+		background-color: lightgrey;
+	}
+	.reaction:hover .action-button{
+		background-color: black;
+		display: none;
+	}
+	.reaction:hover .action{
+		display: initial;
+	}
+	.reaction:hover{
+		animation-name: popup;
+		animation-duration: 150ms;
+	}
+
+	@keyframes popup{
+		from{
+			height: 0px;
+			width: 0;
+		}
+		to{
+			height: 50px;
+			width: auto;
+		}
+	}
+</style>
